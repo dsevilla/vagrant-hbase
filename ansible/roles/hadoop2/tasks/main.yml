@@ -9,7 +9,7 @@
            chdir=/home/vagrant/
            creates='{{ hadoop_home_dir }}'
 
-- name: symlink Hadoop home directory to just hadoop/
+- name: symlink Hadoop home directory to just $HOME/hadoop/
   file: path=/home/vagrant/hadoop src='{{ hadoop_home_dir }}' state=link
 
 - name: add HADOOP_PREFIX to environment variables
